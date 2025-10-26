@@ -24,6 +24,34 @@ As a member of the Data Science and AI team in the startup, you have been tasked
   - 0: neutral
   - -1: negative
  
+ 
+#### Heatmap / Correlation:
+![Heatmap of features](https://github.com/ShauryaRawat10/Data-Science/blob/11f7a900c886eaf061deec18057fbc5803fbfce1/Generative%20AI/Storage/Heatmap.png)
+
+---
+
+#### Stock Price Density Graph
+![Density Graph](https://github.com/ShauryaRawat10/Data-Science/blob/11f7a900c886eaf061deec18057fbc5803fbfce1/Generative%20AI/Storage/Stock_price_density_graph.png)
+
+#### Seasonality in Dataset: (Stock High, Low, Close, Volume):
+![Seasonality](https://github.com/ShauryaRawat10/Data-Science/blob/11f7a900c886eaf061deec18057fbc5803fbfce1/Generative%20AI/Storage/Line_plot_Seasionality.png)
+
+---
+
+#### Training Dataset Evaluation:
+[Training dataset confusion matrix](https://github.com/ShauryaRawat10/Data-Science/blob/11f7a900c886eaf061deec18057fbc5803fbfce1/Generative%20AI/Storage/training_datset.png)
+
+--- 
+
+#### Validation Dataset Evaluation:
+[Validation dataset confusion matrix](https://github.com/ShauryaRawat10/Data-Science/blob/11f7a900c886eaf061deec18057fbc5803fbfce1/Generative%20AI/Storage/validation_dataset.png)
+
+--- 
+
+#### Testing DataSet Evaluation:
+![Testing dataset confusion matrix](https://github.com/ShauryaRawat10/Data-Science/blob/11f7a900c886eaf061deec18057fbc5803fbfce1/Generative%20AI/Storage/Testing_dataset.png)
+
+---
 
 ## **Overall Conclusions**
 - Embedding ranking (by Validation): **Sentence Transformer** > GloVe > Word2Vec
