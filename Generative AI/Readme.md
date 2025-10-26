@@ -25,10 +25,6 @@ As a member of the Data Science and AI team in the startup, you have been tasked
   - -1: negative
  
 
-
-
-
-
 ## **Overall Conclusions**
 - Embedding ranking (by Validation): **Sentence Transformer** > GloVe > Word2Vec
 - Sentence Transformer has same performance in tuned and base version for validation dataset
@@ -41,10 +37,9 @@ As a member of the Data Science and AI team in the startup, you have been tasked
 - LLM Model for summarization:
   - **Mistral-7B-Instruct-v0.2-GGUF** worked perfect for summrization after fine tuning the prompts and model parameters, giving sigificantly better results for top positive and negative sentiments
 
-
 ---
 
-#### Recommendation
+## Recommendation
 
   - Recommended **Champion** Model
     - Balanced classification (−1/0/+1 treated equally):
