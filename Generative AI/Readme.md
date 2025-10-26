@@ -39,12 +39,12 @@ As a member of the Data Science and AI team in the startup, you have been tasked
 ---
 
 #### Training Dataset Evaluation:
-[Training dataset confusion matrix](https://github.com/ShauryaRawat10/Data-Science/blob/11f7a900c886eaf061deec18057fbc5803fbfce1/Generative%20AI/Storage/training_datset.png)
+![Training dataset confusion matrix](https://github.com/ShauryaRawat10/Data-Science/blob/11f7a900c886eaf061deec18057fbc5803fbfce1/Generative%20AI/Storage/training_datset.png)
 
 --- 
 
 #### Validation Dataset Evaluation:
-[Validation dataset confusion matrix](https://github.com/ShauryaRawat10/Data-Science/blob/11f7a900c886eaf061deec18057fbc5803fbfce1/Generative%20AI/Storage/validation_dataset.png)
+![Validation dataset confusion matrix](https://github.com/ShauryaRawat10/Data-Science/blob/11f7a900c886eaf061deec18057fbc5803fbfce1/Generative%20AI/Storage/validation_dataset.png)
 
 --- 
 
