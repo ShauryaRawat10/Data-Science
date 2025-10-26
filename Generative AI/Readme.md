@@ -30,12 +30,11 @@ As a member of the Data Science and AI team in the startup, you have been tasked
 
 
 **Overall Conclusions**
-
-  - Embedding ranking (by Validation): **Sentence Transformer** > GloVe > Word2Vec.
-  - Sentence Transformer has same performance in tuned and base version for validation dataset
-  - Glove also has same performance in both base and tuned versions, Word2Vec has little increase in tuned version 
-  - Test dataset Performance:
-    - Test data has best performance with accuracy, precision and recall as 1
+- Embedding ranking (by Validation): **Sentence Transformer** > GloVe > Word2Vec.
+- Sentence Transformer has same performance in tuned and base version for validation dataset
+- Glove also has same performance in both base and tuned versions, Word2Vec has little increase in tuned version
+- Test dataset Performance:
+  - Test data has best performance with accuracy, precision and recall as 1
 
 - Final model selection:
   - **Sentence Transformer** Base model is best for productionization, as both tuned and base model have same performance
