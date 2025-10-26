@@ -29,8 +29,8 @@ As a member of the Data Science and AI team in the startup, you have been tasked
 
 
 
-**Overall Conclusions**
-- Embedding ranking (by Validation): **Sentence Transformer** > GloVe > Word2Vec.
+## **Overall Conclusions**
+- Embedding ranking (by Validation): **Sentence Transformer** > GloVe > Word2Vec
 - Sentence Transformer has same performance in tuned and base version for validation dataset
 - Glove also has same performance in both base and tuned versions, Word2Vec has little increase in tuned version
 - Test dataset Performance:
