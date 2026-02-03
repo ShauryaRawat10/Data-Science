@@ -22,7 +22,12 @@
   - 10% - Visualize the data
   - 80% - Present your findings (show insights to stakeholders)
 
+## Visualization
+- Visualization for Data Mining
+- Visualization for Presentation
 
+**Visual cinnamon**
+**Bussed out - Article on population : Has Visualization**
 
 
 
