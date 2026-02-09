@@ -1,3 +1,5 @@
+# Statistics
+
 ## Statistics Fundamentals
 - **Distributions**
   - Normal Distribution
@@ -138,9 +140,90 @@
   - A3C (Asynchronous Advantage Actor-Critic): Critic Sense to AI
 
 
+# EDA
+- Statistical Significance (Something like P_Value less than 0.05 for all features)
+- Correlation between I/P and O/P variable (or across independent variables)
+
+
+# Python
+
+**Note**: Download dataset of choice from **uci ml repository**
+https://archive.ics.uci.edu/
+
+## Machine Learning
+
+```
+# Regression
+
+import pandas as pd 
+dataset = pd.read_excel('sample_data/Folds5x2_pp.xlsx')
+
+X = dataset.iloc[:, 0:-1].values
+y = dataset.iloc[:, -1].values
+
+# Splitting dataset into training and testing set
+# sklearn is library, model_selection is module with models
+from sklearn.model_selection import train_test_split 
+
+# random_state = 0 means that everytime we run experiment, it will have same combination set in test-train data
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state = 0)
+
+# Fitting Gradient Boosting model to training set (Has multiple week learners, choose loss function -> GD find params such that decision tree minimize loss function)
+# GBR is actually a class that defines GD model
+from sklearn.ensemble import GradientBoostingRegressor 
+
+# create object of a gradient boosting regressor class
+regressor = GradientBoostingRegressor()
+
+# train regressor with data
+regressor.fit(X_train, y_train)
+
+# Predict test set results
+y_pred = regressor.predict(X_test)
 
 
 
+# Classification
+
+columns = [
+    'Sample code', 'Clump Thickness', 'Uniformity of Cell Size',
+    'Uniformity of Cell Shape', 'Marginal Adhesion',
+    'Single Epithelial Cell Size', 'Bare Nuclei', 'Bland Chromatin',
+    'Normal Nucleoli', 'Mitoses', 'Class'
+]
+
+dataset = pd.read_csv('sample_data/breast-cancer-wisconsin.data', header=None, names=columns)
+
+dataset = dataset.replace('?', 0)
+
+X = dataset.iloc[:, 0:-1].values
+y = dataset.iloc[:, -1].values
+
+# Splitting dataset into training and testing set
+# sklearn is library, model_selection is module with models
+from sklearn.model_selection import train_test_split 
+
+# random_state = 0 means that everytime we run experiment, it will have same combination set in test-train data
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state = 0)
+
+# Fitting Gradient Boosting model to training set (Has multiple week learners, choose loss function -> GD find params such that decision tree minimize loss function)
+# GBR is actually a class that defines GD model
+from sklearn.ensemble import GradientBoostingClassifier
+
+# create object of a gradient boosting classifier class
+classifier = GradientBoostingClassifier()
+
+# train classifier with data
+classifier.fit(X_train, y_train)
+
+# Predict test set results
+y_pred = classifier.predict(X_test)
+
+# Confusion matrix
+# CM is a function, metrics is module, sklearn is library
+from sklearn.metrics import confusion_matrix
+cm = confusion_matrix(y_test, y_pred)
+```
 
 
 
