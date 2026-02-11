@@ -393,6 +393,132 @@ Lets check linear independent $e_1$ and $e_2$
 <img width="350" height="196" alt="image" src="https://github.com/user-attachments/assets/0ceaff56-5348-44cb-aeae-caad759da6bd" />
 
 
+```
+Basis, Determinant, and Inverse — The Backbone of Machine Learning Math
+If AI models were buildings, then vectors and matrices would be the bricks and beams. But how those bricks are arranged, how stable the structure is, and whether you can reverse-engineer it — that’s what these three ideas tell us:
+
+- Basis – the essential building blocks
+- Determinant – the stability check
+- Inverse – the undo button
+
+Let’s take them one by one — and show how they quietly shape what machines can understand and do.
+
+
+
+🧱 1. Basis: The Smallest Set That Builds Everything
+Imagine you’re designing a LEGO set. You want the fewest bricks possible, but you still want to build anything in the set's theme.
+
+That’s what a basis is in a vector space.
+
+A basis is the minimum set of independent vectors you need to build everything else in the space — just by scaling and adding them.
+
+In 2D, two independent vectors (not pointing in the same direction) can form a basis. Together, they can generate any point on the plane. In 3D, you need three such vectors.
+
+In AI:
+- A basis tells us the dimension of the feature space (how many truly unique features we have).
+- Finding a smaller basis means we can compress data without losing its structure — just like reducing a sentence to its key ideas.
+- This is the idea behind dimensionality reduction methods like PCA, which help models focus only on what really matters.
+
+
+
+📏 2. Determinant: A Test for Volume — and Stability
+The determinant sounds intimidating, but it’s really just a number that answers one big question:
+
+“Does this matrix squash space down to zero — or does it keep space open and usable?”
+
+In geometric terms, the determinant tells you the volume scaling of a matrix transformation.
+
+If the determinant is 0, it means your matrix collapses space — everything lies flat, and you lose a dimension.
+
+If the determinant is non-zero, you’re good — the space is preserved (just stretched or rotated).
+
+In AI:
+- A determinant of zero means some features are redundant or linearly dependent — there’s no unique solution to a system.
+- It helps us detect when a matrix is invertible — which leads us to the next concept.
+
+
+
+🔄 3. Inverse: Undoing a Transformation
+Ever wish you could hit Undo on something? In linear algebra, the inverse of a matrix does exactly that.
+
+If matrix A transforms a vector in a certain way, the inverse of A brings it back to where it started. (That I is the identity matrix — our do-nothing hero from earlier.)
+
+But not all matrices have inverses. A matrix only has an inverse if:
+- Its determinant isn’t zero
+- Its columns are linearly independent
+- It’s a square matrix (same number of rows and columns)
+
+In AI:
+
+We use matrix inverses to solve systems of equations, especially in linear regression (eq below):
+
+```
+$\hat{w}=(X^{T}X)^{-1}X^{T}y$
+
+
+#### Solving equation of form Ax=b
+<img width="300" height="133" alt="image" src="https://github.com/user-attachments/assets/9c308fd4-4b91-4b22-84f5-d87e543cb528" />
+
+#### The Gauss Method
+
+<img width="311" height="125" alt="image" src="https://github.com/user-attachments/assets/11405eff-43a4-4828-993f-bfe8e780da41" />
+<br>
+
+- Scaling 2nd matrix by 5
+<img width="350" height="122" alt="image" src="https://github.com/user-attachments/assets/383e1d3b-021b-4148-83f1-aa05f6cb99d9" />
+<br> 
+
+- main aim is to get as many zeros as we can
+- for the final augmneted matrix, system of equations will be
+
+<img width="348" height="189" alt="image" src="https://github.com/user-attachments/assets/807ffc33-81c1-4667-a702-407b4a700e0c" />
+<br>
+
+<img width="326" height="202" alt="image" src="https://github.com/user-attachments/assets/842588c9-2d1d-4eda-9c18-e2cc7941117c" />
+
+<br>
+
+<img width="308" height="189" alt="image" src="https://github.com/user-attachments/assets/c1790e2e-8553-4c28-8334-d1ff7947f663" />
+
+#### Linear Independence of Random set of variables
+- It is linearly indepedent when lamba is 0
+<img width="306" height="125" alt="image" src="https://github.com/user-attachments/assets/2f74aa49-f16c-469b-b263-1f374e079a5b" />
+
+<br>
+<img width="304" height="86" alt="image" src="https://github.com/user-attachments/assets/f5c3a34f-812f-4dd4-ba8d-7f33003197b0" />
+<br>
+<img width="292" height="87" alt="image" src="https://github.com/user-attachments/assets/353c1c86-ee1e-4b93-9079-45be365c202f" />
+<br>
+<img width="302" height="140" alt="image" src="https://github.com/user-attachments/assets/7afa4ba0-e679-4770-8cc0-24abce2672b1" />
+<br>
+<img width="305" height="122" alt="image" src="https://github.com/user-attachments/assets/71976278-e4a5-4508-a8cb-74deececfe76" />
+<br>
+<img width="290" height="140" alt="image" src="https://github.com/user-attachments/assets/6c52cfc0-7ad6-48fe-b873-8a3beb2db747" />
+<br>
+<img width="301" height="134" alt="image" src="https://github.com/user-attachments/assets/383b97b2-9fd4-46a1-bba1-9d2817b3ab87" />
+- lambda's came as 0
+
+<hr>
+
+## Eigenvalues and Eigenvectors
+
+<img width="348" height="187" alt="image" src="https://github.com/user-attachments/assets/6c4fc490-bc59-4126-af14-a2edc65f3187" />
+<br>
+<img width="349" height="184" alt="image" src="https://github.com/user-attachments/assets/182dd585-a1ff-4461-bd28-b79e30085b08" />
+
+- **Eigenvalue**
+  - A scalar with one or multiple eigenvectors
+  - Any time we define eigenvector, we must specify its eigenvalue as well
+  - Single eigenvalue can have many eigenvectors
+
+
+
+
+
+
+
+
+
 
 
 
