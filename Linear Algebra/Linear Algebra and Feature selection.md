@@ -1,0 +1,291 @@
+# Linear Algebra and Feature Selection
+
+## Linear Algebra Essentials
+
+- Why Linear Algebra
+  - Understand Theory Dimensionality Reduction
+    - Retaining most important feature by tranforming into different space
+  - Deal with data using Matrices and Vectors
+
+```
+At a cutting-edge tech startup, the engineering team is buzzing. The company’s flagship product — an AI system that predicts
+house prices — has hit a snag. The performance of the model has suddenly dropped after integrating a new dataset with hundreds of features.
+
+The boss, Dr. Nova, calls in two of her machine learning engineers:
+Alex, who has a strong grasp of linear algebra.
+Jamie, who mostly relies on plug-and-play machine learning libraries and avoids anything that sounds like "matrix math".
+                                               
+“We suspect multicollinearity — too many features are redundant or highly correlated. We need to reduce the dimensionality of the data
+without losing predictive power. I want each of you to try and solve it your own way. Let’s meet back in a day.”
+
+Jamie’s Approach: Trial and Error
+Jamie opens their favorite Python notebook and starts randomly dropping columns and retraining the model. Maybe “Zip Code” and “City”
+are redundant? Maybe “Number of Rooms” and “Size in Sq Ft” are correlated?
+Hours go by.....
+Jamie tries dozens of combinations but can't seem to improve the performance consistently. There’s no clear strategy.
+Eventually, Jamie runs a basic correlation heatmap but struggles to interpret it beyond “red is bad?”
+
+Alex’s Approach: Linear Algebra to the Rescue
+Alex knows this problem smells like a job for Principal Component Analysis (PCA), a technique grounded in eigenvectors, eigenvalues, and matrix decomposition — the backbone of linear algebra.
+
+Alex performs the following steps:
+- Standardizes the data.
+- Computes the covariance matrix of the features.
+- Finds the eigenvectors and eigenvalues of the covariance matrix.
+- Projects the data into a lower-dimensional space, keeping only the components that capture most of the variance.
+- Alex not only reduces the number of features from 300 to 15, but also retains 95% of the information. The model trains faster, and performance improves dramatically.
+```
+
+#### Vectors
+- One-Dimensional object
+- Has magnitude (arrow length) and direction
+- Magnitude -> ||v||
+
+<img width="299" height="68" alt="image" src="https://github.com/user-attachments/assets/6b71c730-62c6-436b-9105-b519e9af2903" />
+
+- Two types:
+  - Row Vectors
+  - Column Vectors
+ 
+<img width="467" height="248" alt="image" src="https://github.com/user-attachments/assets/f4473dc8-b2b5-481a-a1b5-2a6f680923d2" />
+
+
+- Operations
+  - Addition and Substration need vectors of same size
+  - Dot product is sum of multiplication of vectors
+
+<img width="521" height="296" alt="image" src="https://github.com/user-attachments/assets/3eb595a3-ef46-4d93-8114-afb6114d88d8" />
+<br>
+<img width="368" height="201" alt="image" src="https://github.com/user-attachments/assets/053a6293-56ba-4853-91cc-329f938f4c6c" />
+
+It always produces scalar
+
+<img width="229" height="112" alt="image" src="https://github.com/user-attachments/assets/35339e82-8f13-490e-a2e0-97c4e5e673c8" />
+
+#### Matrix
+- 2 D
+- [ $a_n$ ] -> n represent size
+- Addition on smae shape matrix
+- Multiplication -> number of columns in A should be equal to number of rows in B
+
+<img width="403" height="204" alt="image" src="https://github.com/user-attachments/assets/1f2edb4e-e98f-4566-97ce-2038fa81da89" />
+
+#### Matrix Transformation
+- Rotation Transformation
+  - Rotates a vector arounfd origin by θ
+- Scaling Transformation
+  - Change size of vector while keeping its direction
+
+```
+Vectors and Matrices: The Language of Intelligence
+In school, vectors and matrices often get introduced with a long list of operations: dot products, transposes, row reductions, and so on.
+But what gets missed in all of that?
+
+👉 What they actually mean.
+
+Because when you’re working in machine learning or artificial intelligence, you're not just pushing numbers around.
+You're thinking in terms of directions, relationships, and compressed representations of the world.
+
+Let’s take a step back — and look at what vectors and matrices really are, and why they power AI.
+
+
+
+🧱 What Is a Vector, Really?
+A vector is often written like a list of numbers:
+
+
+But this isn’t just a random list.
+
+A vector represents:
+- A direction in space
+- A position from the origin
+
+Or — in machine learning — a set of features describing something
+
+Let’s say we’re building a model that predicts housing prices. For one house, the vector might look like this:
+
+That’s a data point. And in ML, every data point is a vector.
+
+Think of a vector as a snapshot of reality: one object, one moment, one state — captured in numbers.
+
+
+
+🧩 What’s a Matrix Then?
+Now imagine you have 1,000 houses, each with their own vector. What do you get?
+
+A matrix.
+
+
+Each row is a house → a data point → a vector.
+Each column is a feature: size, rooms, distance, etc.
+
+So a matrix in machine learning is usually a dataset. A big, structured table of examples that we want to learn from.
+
+But it’s more than a table.
+
+It’s the foundation for linear transformations — and those are everywhere in AI.
+
+
+
+🔄 Vectors and Matrices as Transformations
+Let’s say you have an input vector, and you want to transform it — maybe rotate it, scale it, or map it into a new space where it's easier to classify.
+
+That’s what a matrix can do.
+
+If you multiply a vector by a matrix, like this:
+
+
+You’re changing that vector in a very specific, structured way.
+
+This is exactly what happens in a neural network.
+
+- Each layer of a neural network:
+- Takes in a vector (features)
+- Multiplies it by a matrix (weights)
+- Applies a function (like ReLU or sigmoid)
+- Passes the result to the next layer
+
+It’s just vectors flowing through matrices — again and again — until the final output is reached.
+
+
+
+🤖 How Does This Relate to Learning?
+In machine learning, the goal is often to learn the right matrix.
+
+We have:
+- Input vectors (data)
+- Output targets (labels or predictions)
+
+And we want to find the weights matrix that transforms the inputs into the correct outputs.
+
+This is where optimization kicks in — adjusting the entries in the matrix to reduce errors. In training, the model updates the numbers in its matrices until it becomes good at mapping inputs to outputs.
+
+
+
+🧠 Why This Is Beautiful (and Useful)
+Here’s the big idea:
+- Vectors represent things (data points, features, directions)
+- Matrices represent actions (transformations, relationships, learned behaviors)
+
+Together, they create a language that AI models use to understand patterns, make decisions, and learn from data.
+```
+
+#### Transpose of vector or matrices
+- Denoted by $X^t$
+- Changing rows to columns and vice versa
+
+<img width="307" height="190" alt="image" src="https://github.com/user-attachments/assets/39423501-8458-4652-8865-3ee8aca3e958" />
+
+- Identity Matrix
+  - Has 1 in diagonal
+  - Multiplying Identity matrix with any matrix with return same matrix 
+<img width="292" height="145" alt="image" src="https://github.com/user-attachments/assets/b392a2ff-1e57-408e-b774-9a23e17fa79f" />
+<br>
+<img width="300" height="179" alt="image" src="https://github.com/user-attachments/assets/60a601e1-18b4-4b97-97ab-56ee10203c07" />
+
+```
+Why the Identity Matrix Matters in AI
+
+Here’s where things get really interesting.
+In machine learning and neural networks, the identity matrix plays a quiet but crucial role.
+Yes, it doesn’t seem to do much. But its real power lies in what it preserves — structure, meaning, stability.
+
+1. 🛠 Initializing Neural Networks
+Think of building a neural network like building a robot's brain.
+Before the robot learns anything, its brain needs a starting point. Usually, we fill its connections (called weights) with random numbers — like giving it random guesses.
+But sometimes, it's better to start with something neutral. That’s where the identity matrix comes in.
+
+Starting with an identity matrix is like saying:
+
+“Okay, don’t change anything yet — just pass the input along as it is.”
+
+It's like giving the robot a blank mind that doesn’t interfere — it simply listens first, and starts learning gradually.
+
+This helps the learning process stay stable, especially in deep networks where many layers are stacked on top of each other.
+
+
+
+2. 🔁 Understanding Inverses
+In machine learning, we often apply a series of steps (transformations) to data. But sometimes, we need to undo those steps.
+
+Imagine putting on a jacket and then taking it off. The action of taking it off is the inverse of putting it on.
+
+In matrix math, every matrix that has an inverse works the same way:
+
+That means:
+
+"If I do something, and then undo it, I end up back where I started."
+The identity matrix is the home position — the original, unchanged state. It helps us define and check if our transformations make sense and can be reversed.
+
+
+
+3. 🔄 Gradient Flow in Neural Networks
+When an AI learns, it uses a process called backpropagation — a way of sending signals backward through the network to adjust and improve.
+
+But here's the problem: if those signals become too small (or too large), the learning process can break down.
+
+The identity matrix helps keep things steady. In some parts of the learning process, it acts like a clear, direct path for the signal — no twists, no detours.
+
+You can think of it like this:
+
+Imagine you're whispering a message through many people. If each person changes your message even a little, it might be unrecognizable by the end.
+But if some people in the chain simply repeat it exactly — like the identity matrix does — the message stays strong.
+
+This helps the AI learn better and faster, especially in deep networks.
+```
+
+#### Linear combination of Vectors
+
+<img width="318" height="143" alt="image" src="https://github.com/user-attachments/assets/7bf1f8cf-f5a0-47d8-84a5-7371b73d99c4" />
+
+Lambda can be Integers, Fractions or Zero
+
+<img width="314" height="181" alt="image" src="https://github.com/user-attachments/assets/263f85f3-0af9-4b54-a21f-ff1b4a2afdc5" />
+
+#### Linear Span of Vectors
+- Set of all possible combinations of vectors
+
+<img width="312" height="194" alt="image" src="https://github.com/user-attachments/assets/298b3f64-52cd-4aa9-b944-620b9507e664" />
+
+#### Basis vector
+- Represented by $e_i$
+- Length is 1
+
+<img width="311" height="165" alt="image" src="https://github.com/user-attachments/assets/0f2393a0-ee1a-4cb2-940a-b1b743e34a75" />
+
+<br>
+<img width="310" height="171" alt="image" src="https://github.com/user-attachments/assets/123e0784-539e-4968-b500-4567fd25f625" />
+
+<br>
+
+<img width="311" height="207" alt="image" src="https://github.com/user-attachments/assets/1407ec3e-cb45-4e75-b25f-52e9fd348078" />
+
+#### Linear Independence
+- A set consists of linearly independent vectors when none of them are in linear span of rest of vectors
+- $e_1$ can not be obtained from $e_2$
+
+<img width="308" height="172" alt="image" src="https://github.com/user-attachments/assets/2935c296-4a19-4b8a-91d5-07fdfd4928e2" />
+
+- Linear span of $e_2$ is the set of all vectors multiplied by $e_2$
+
+<img width="306" height="191" alt="image" src="https://github.com/user-attachments/assets/8eb50817-f75c-4b8a-94fb-d327b2bd4713" />
+
+- Linear dependent
+  - Set of vectors is linearly dependent if there is linear combination of them with non-zero coefficients that equals zero
+
+<img width="338" height="161" alt="image" src="https://github.com/user-attachments/assets/c576d3ce-9d9f-48f0-a1bf-8bff57af31b5" />
+
+- Linear independent : when no mu holds for vectors
+<img width="346" height="95" alt="image" src="https://github.com/user-attachments/assets/85c7796e-cbe9-4259-b8bd-93ff032205d9" />
+
+
+
+
+
+
+
+
+
+
+
+
