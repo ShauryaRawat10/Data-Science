@@ -514,6 +514,179 @@ $\hat{w}=(X^{T}X)^{-1}X^{T}y$
 
 
 
+---
+
+## Dimensionality Reduction Motivation
+
+#### Feature selection, extration and dimensionality reduction
+
+#### Feature Selection
+- Process of reducing number of features used in ML model in order to preserve ability to predict
+- Retains a subset of original features
+
+- **Feature Engineering**
+  - Tranforming I/P dataset (high dimensional dataset) 
+
+#### Feature Extraction
+- Transform existing features into new ones
+- Generates new features
+
+#### Dimensionality Reduction
+- Combination of Feature Selection and Feature Extraction
+- Selection of features that captures most important information
+
+#### Curse of Dimensionality (High Dimensional data)
+- Lack of data points in high dimensionality
+- Huge distance between data points
+- Increased complexity
+- Increased noise in data
+- Storage cost
+- Longer training periods
+
+**Dimensionality Reduction** helps resolving these issues
+
+## Principal Component Analysis
+- PCA is an algorithm used for dimensionality reduction
+- Widely used in Unsupervised learning
+- PCA is used to reduce the number of features in a dataset into smaller subset which preserves most of the information from the original
+
+- Data Types
+  - Categorical
+  - Numerical
+
+- PCA converts 3D space datset to 2D space, so that most important information is retained
+- We can discard the ones which low variance
+<img width="366" height="164" alt="image" src="https://github.com/user-attachments/assets/3843153a-20a1-49ae-ac66-ae8361717c02" />
+
+- How many components to keep when performing PCA in general?
+  - 80% of total variance 
+
+- Measuring the spread of data
+  - There is no linear relationship between principle components
+  - They are constructed in a way that makes the next component perpendicular to previous
+
+- How does PCA projects points onto principal components?
+  - Each principal component will be a linear combination of all attributes
+
+- When the data we work with has only two explanatory variables, we can decide to take both components produced by PCA
+
+
+
+#### Covariance matrix
+- It shows correlation between any pair of variables in our initial dataset
+- Covariance of $x_1$ and $x_2$ is same $x_2$ and $x_1$
+
+<img width="391" height="222" alt="image" src="https://github.com/user-attachments/assets/cd547332-cd03-47ec-81b7-d5bbf1f59c4b" />
+<br> 
+
+<img width="383" height="200" alt="image" src="https://github.com/user-attachments/assets/ada3ee5c-c6b3-4663-84cb-0236384d077e" />
+<br>
+
+<img width="382" height="212" alt="image" src="https://github.com/user-attachments/assets/3838151d-aead-4938-adef-e6cc2013d0ab" />
+
+<br>
+
+- Eigenvectors of the covariance matrix are principal components
+- find mu
+
+<img width="290" height="123" alt="image" src="https://github.com/user-attachments/assets/4be5795c-e2cd-4967-82ed-c5ec48c8e873" />
+
+<br>
+
+- By ranking our eigenvectors by their eigenvalues from highest to lowest we obtain principal components in order of significance
+- If we have below example, with Eigenvalues, and mu1 > mu2 then Principal components for PC1 and PC2 will be V1 and V2
+
+<img width="299" height="184" alt="image" src="https://github.com/user-attachments/assets/f684aa07-c1e6-4627-a4eb-cf865bcecfea" />
+
+- To compute percentage of information accounted by each component, we divide eigenvalue of respective component by sum of all eigenvalues
+
+<img width="302" height="163" alt="image" src="https://github.com/user-attachments/assets/a46dea78-0458-4e05-ba6c-7b88751bb532" />
+
+
+#### Code
+
+<img width="648" height="281" alt="image" src="https://github.com/user-attachments/assets/b6725b93-09a6-4c31-9160-bcba5ed5ad0a" />
+<br>
+<img width="644" height="277" alt="image" src="https://github.com/user-attachments/assets/929f4936-352f-426d-a53c-506929134e91" />
+<br>
+<img width="594" height="326" alt="image" src="https://github.com/user-attachments/assets/4af624a1-3252-4b69-b395-8770460d334e" />
+<br>
+<img width="577" height="197" alt="image" src="https://github.com/user-attachments/assets/fa0c7e43-1406-40f0-be29-bae365d6d981" />
+<br>
+<img width="604" height="207" alt="image" src="https://github.com/user-attachments/assets/c33bb8ee-2624-48cb-b335-5b68115d0cfd" />
+<br>
+<img width="649" height="188" alt="image" src="https://github.com/user-attachments/assets/10c50e58-de01-401d-a114-3fb90a2ae8b8" />
+<br>
+<img width="545" height="273" alt="image" src="https://github.com/user-attachments/assets/31414021-d83a-4b45-9815-7580298f53c3" />
+<br> 
+<img width="430" height="77" alt="image" src="https://github.com/user-attachments/assets/112727c4-11fb-4871-bcaa-34836d5c15df" />
+<br>
+<img width="410" height="204" alt="image" src="https://github.com/user-attachments/assets/8dfcdcaf-0804-475f-b491-0096d18a5053" />
+<br>
+<img width="449" height="192" alt="image" src="https://github.com/user-attachments/assets/4a41afaa-a096-4507-84c7-92f23477f562" />
+<br>
+<img width="451" height="134" alt="image" src="https://github.com/user-attachments/assets/a92d96e7-88bd-4cbe-952d-101f0f0dbaa6" />
+<br>
+<img width="404" height="107" alt="image" src="https://github.com/user-attachments/assets/12c526d0-6bb2-4f92-a4af-01b7785854c3" />
+<br>
+<img width="337" height="173" alt="image" src="https://github.com/user-attachments/assets/f24d8dfc-3d44-4a4f-8430-d6ac4311afa4" />
+<br>
+
+---
+
+## Linear Discriminant Analysis (LDA)
+- Method for Dimensionality reduction
+- Find linear combination of features to separate 2 or more classes
+<img width="382" height="224" alt="image" src="https://github.com/user-attachments/assets/7956cf6f-f20d-4325-b13c-92b13b2fdcc0" />
+
+<br>
+<img width="378" height="198" alt="image" src="https://github.com/user-attachments/assets/0898597b-4b26-4c65-91da-2ed2f70b9d97" />
+
+#### Calculating Within- and Between-class scatter matrices
+<img width="307" height="158" alt="image" src="https://github.com/user-attachments/assets/c486e8d7-5786-49cb-8c00-8d66694991e8" />
+<br>
+<img width="296" height="152" alt="image" src="https://github.com/user-attachments/assets/bd2e1f99-cea3-4b05-b399-0ea9bbbc3264" />
+<br>
+<img width="310" height="196" alt="image" src="https://github.com/user-attachments/assets/476c8819-da94-46a4-99aa-0a15f5347b11" />
+<br>
+<img width="342" height="201" alt="image" src="https://github.com/user-attachments/assets/221c8d17-0a3d-4dfb-a905-3881912dd852" />
+<br>
+<img width="314" height="188" alt="image" src="https://github.com/user-attachments/assets/fa30e8b2-dff5-45cc-b95b-64810ffea4ec" />
+<br>
+<img width="305" height="152" alt="image" src="https://github.com/user-attachments/assets/8a1c4df3-e3cf-4e67-afe7-e1b754a00942" />
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
