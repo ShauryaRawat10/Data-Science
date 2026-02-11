@@ -279,6 +279,127 @@ Lambda can be Integers, Fractions or Zero
 <img width="346" height="95" alt="image" src="https://github.com/user-attachments/assets/85c7796e-cbe9-4259-b8bd-93ff032205d9" />
 
 
+```
+Smart Features, Smarter Models: Why Linear Independence Fuels AI
+🔗 Linear Span and Linear Independence:
+How AI Knows What’s Useful and What’s Not
+
+When we work with vectors in machine learning, we often deal with lots of data — sometimes hundreds or thousands of features at once.
+
+But not all vectors are equally useful. Some are unique and bring new information. Others just repeat what we already know in a different form.
+
+This is where the two powerful ideas from linear algebra come in:
+- Linear span — what vectors can build
+- Linear independence — whether a vector is truly new
+
+Let’s break it down.
+
+
+🧱 Linear Span: What Can These Vectors Build?
+Imagine you have two LEGO bricks — a red one and a blue one.
+
+If those bricks are long enough, you can combine them to build a purple wall — by stacking some red and some blue.
+
+That’s the idea of span.
+
+The span of a set of vectors is all the things you can build by mixing them together.
+
+In math, mixing means taking combinations of the vectors — scaling them (multiplying by numbers) and adding them together.
+
+For example:
+- The span of two 2D vectors might cover the whole flat plane.
+- But the span of just one vector can only reach points along its direction — a line.
+
+In AI, this is important because it tells us:
+
+“What space of possibilities can my features represent?”
+
+If your features span a large space, your model has more flexibility to learn. If they only span a small space, it might miss important patterns in the data.
+
+
+
+✂️ Linear Independence: Are These Vectors Saying the Same Thing?
+Now let’s say you have three LEGO bricks — red, blue, and purple.
+
+But wait… the purple one is just a mix of the red and blue. It’s not really new — you could’ve built it from what you already had.
+
+That’s linear dependence.
+
+A set of vectors is linearly independent if none of them can be built by combining the others.
+
+If one can be written using the others, it’s dependent — and kind of redundant.
+
+In machine learning, linear independence helps us avoid duplicated or useless features. It helps answer questions like:
+- Do I really need all these features?
+- Am I just repeating the same information in different forms?
+- Can I compress my data without losing power?
+
+Techniques like PCA (Principal Component Analysis) are all about finding the smallest number of independent vectors that can still span the space of your data. We'll talk more about PCA in the lessons to come. :) 
+
+
+
+🤖 Why It Matters in Machine Learning
+Let’s connect this to AI in a simple way:
+- The span tells you how much your features can express — what patterns your model can potentially learn.
+- Independence tells you how much of your data is actually useful — and not just noise or repetition.
+
+In real-world machine learning:
+- We want features that are independent, so they each bring new information.
+- We want a large span, so our model has room to learn complex things.
+- And sometimes, we want to reduce features — but keep the same span — by removing redundant ones.
+```
+
+#### Vector Space
+- A set of vectors that can be added and substracted together, as well as multiplied by numbers called scalars
+
+<img width="310" height="194" alt="image" src="https://github.com/user-attachments/assets/946bc1d8-0eec-405a-a1aa-c636c4badf89" />
+
+#### Basis of Vector space
+- A set of vectors whose number equals the dimension of that space
+- A set of vectors that are linearly independent of each other. Their linear span is the entirety of vector space
+- Think it of, smallest set of vectors that generates the vector space
+
+Lets check linear independent $e_1$ and $e_2$  
+
+<img width="311" height="125" alt="image" src="https://github.com/user-attachments/assets/29cc1fdb-7395-48c3-afb8-f33287029428" />
+
+- we can see that $e_1$ and $e_2$ can span this vector and also whole dimensional space
+- $e_1$ and $e_2$ form a basis
+
+
+#### Determinant of a Matrix
+- A number obtained from any square matrix
+- Identifies whether it is invertible or not (Not all matrix can be inverted)
+
+<img width="300" height="46" alt="image" src="https://github.com/user-attachments/assets/f39b82e1-2956-45b7-93bb-bdb18fbec49b" />
+
+<br>
+- A matrix is invertible if it is Square matrix and its determinant is not equals zero
+
+<img width="305" height="181" alt="image" src="https://github.com/user-attachments/assets/3bfda2b2-3561-4b20-8719-1813c3029940" />
+
+<br>
+
+<img width="308" height="115" alt="image" src="https://github.com/user-attachments/assets/1334124a-1ed2-47fd-b56c-82e27c8092f8" />
+
+#### Inverse of Matrix
+<img width="346" height="187" alt="image" src="https://github.com/user-attachments/assets/e4f4993a-8092-4b34-b90b-f36b4bb37d68" />
+
+<br>
+
+<img width="347" height="182" alt="image" src="https://github.com/user-attachments/assets/d845df14-5586-4149-8e90-227fef338c31" />
+<br>
+
+<img width="350" height="196" alt="image" src="https://github.com/user-attachments/assets/0ceaff56-5348-44cb-aeae-caad759da6bd" />
+
+
+
+
+
+
+
+
+
 
 
 
