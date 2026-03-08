@@ -83,11 +83,11 @@ tourism_project/
 
 ## Live Links
 
-- **Streamlit App**: https://huggingface.co/spaces/abhishek-kumar/tourism_project
-- **Original Dataset**: https://huggingface.co/datasets/abhishek-kumar/tourism-package-prediction
-- **Train Dataset**: https://huggingface.co/datasets/abhishek-kumar/tourism-package-prediction-train
-- **Test Dataset**: https://huggingface.co/datasets/abhishek-kumar/tourism-package-prediction-test
-- **Model Hub**: https://huggingface.co/abhishek-kumar/tourism-package-prediction-model
+- **Streamlit App**: https://huggingface.co/spaces/ShauryaRawatRwt/tourism_project
+- **Original Dataset**: https://huggingface.co/datasets/ShauryaRawatRwt/tourism-package-prediction
+- **Train Dataset**: https://huggingface.co/datasets/ShauryaRawatRwt/tourism-package-prediction-train
+- **Test Dataset**: https://huggingface.co/datasets/ShauryaRawatRwt/tourism-package-prediction-test
+- **Model Hub**: https://huggingface.co/ShauryaRawatRwt/tourism-package-prediction-model
 
 ## Setup Instructions
 
@@ -206,6 +206,6 @@ GitHub Actions workflow (`/.github/workflows/pipeline.yml`):
 
 ---
 
-**Project by**: Abhishek Kumar  
+**Project by**: Shaurya Rawat  
 **MLOps Pipeline**: Tourism Package Prediction  
 **Framework**: End-to-end automated ML workflow 
