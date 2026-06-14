@@ -1,6 +1,10 @@
 
 ## Langchain
-
+- Open source framework that simplifies for us to create complex LLM application
+- Used to create Agents and RAG applications
+  - Has abstrated classes and functions available
+  - Prompt engineering templates
+  - Has data extraction technique
 
 #### Installation
 1. Install Git
