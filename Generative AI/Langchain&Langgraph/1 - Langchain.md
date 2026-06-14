@@ -81,9 +81,15 @@ if __name__ == "__main__":
     print(response.content)
 ```
 
-
-
-
+#### Open weights model: Langchain with Ollama
+- Download ollama from ollama.com
+- CLI
+  - Ollama
+  - ollama pull gemma3:270m
+  - ollama list
+  - ollama --help
+  - ollama run gemma3:270m
+    
 
 
 
