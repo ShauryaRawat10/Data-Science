@@ -84,12 +84,22 @@ if __name__ == "__main__":
 #### Open weights model: Langchain with Ollama
 - Download ollama from ollama.com
 - CLI
-  - Ollama
+  - ollama
   - ollama pull gemma3:270m
   - ollama list
   - ollama --help
   - ollama run gemma3:270m
     
+
+#### Lanchain vs langsmith
+LangChain is an open-source framework used to build and orchestrate LLM applications (like chatbots, RAG pipelines, and agents). LangSmith is a platform used to observe, debug, test, and monitor these AI applications in production
+
+
+
+
+
+
+
 
 
 
