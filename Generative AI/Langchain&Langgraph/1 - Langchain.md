@@ -54,6 +54,8 @@ if __name__ == "__main__":
     main()
 ```
 
+#### Langgraph
+<img width="1601" height="572" alt="image" src="https://github.com/user-attachments/assets/5753425c-15ac-4658-95aa-60ed453e2476" />
 
 
 #### Templates
@@ -202,11 +204,69 @@ if __name__ == "__main__":
 #### Pydantic 
 - Structured Output
 
+```
+from dotenv import load_dotenv
+
+from langchain.agents import create_agent
+from langchain.tools import tool
+from langchain_core.messages import HumanMessage
+from langchain_openai import ChatOpenAI
+from langchain_tavily import TavilySearch
+
+from typing import List
+# Import BaseModel and Field Class
+from pydantic import BaseModel, Field
 
 
+# Class Source is inheritred by Pydantic Class BaseModel
+class Source(BaseModel):
+    """ Schema for a source used by the agent"""
+    url:str= Field(description="The URL of the source")
+
+class AgentResponse(BaseModel):
+    """Schema for agent response with answer and sources"""
+
+    answer:str=Field(description="The agent's answer to the query")
+    sources:List[Source] = Field(default_factory=list, description="List of sources used to generate the answer")
 
 
+@tool 
+def search(query: str) -> str:
+    """
+    Tool that serached over internet
+    Args:
+        query: The query to serach for
+    Returns:
+        The search results
+    """
+    print(f"Searching for: {query}")
+    # return "Tokyo Weather is Sunny"
+    return tavily.search(query=query)
 
+
+llm = ChatOpenAI(model="gpt-5")
+tools= [TavilySearch()]
+agent=create_agent(model=llm, tools=tools, response_format=AgentResponse)
+
+def main():
+    result=agent.invoke({"messages":HumanMessage(content="Search for 3 job postings for an ai angineer in india") })
+    print(result)
+
+if __name__ == "__main__":
+    main()
+
+```
+
+<img width="852" height="475" alt="image" src="https://github.com/user-attachments/assets/3555fa24-31c2-4089-9c5c-efd512bc6579" />
+
+
+***
+
+## Agents Under The hood
+- This teaches how Agents works when they first came out. It will help in knowing Agents working behind the scenes better
+- This one uses Ollama 
+
+<img width="407" height="622" alt="image" src="https://github.com/user-attachments/assets/b7c71b40-479d-4c3c-afc6-656bbacad748" />
 
 
 
