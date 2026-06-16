@@ -6,6 +6,10 @@
   - Prompt engineering templates
   - Has data extraction technique
 
+## Course
+- Build AI Agents with Langchain and Langgraph RAG, Tools, MCP, and Production-Ready Agentic AI Systems (Python)
+- LLM Specialist @Google Cloud, Eden Marco
+
 #### Installation
 1. Install Git
 2. Install Cursur IDE
@@ -106,6 +110,108 @@ LangChain is an open-source framework used to build and orchestrate LLM applicat
 - An agent is software system that uses LLMs as reason engine to decide what actions to take and execute those actions
 
 -> React Agents
+
+Query -> LLM (Reason) -> Action -> Observations -> LLM (Reason) -> Output
+
+
+***
+#### Langchain tavily: Connect Agent to Web
+- Connect websearch to agent
+
+#### Tools: Function AI can execute
+- Agent can perform endless possibility of execution
+- @tool decorator
+  - API
+  - Database Search
+
+
+## Tavily Implementation (Tool)
+- Websearch tool
+- Monitor with langssmith 
+
+
+```
+from dotenv import load_dotenv
+
+from langchain.agents import create_agent
+from langchain.tools import tool
+from langchain_core.messages import HumanMessage
+from langchain_openai import ChatOpenAI
+from tavily import TavilyClient
+
+load_dotenv()
+
+tavily = TavilyClient()
+
+@tool 
+def search(query: str) -> str:
+    """
+    Tool that serached over internet
+    Args:
+        query: The query to serach for
+    Returns:
+        The search results
+    """
+    print(f"Searching for: {query}")
+    # return "Tokyo Weather is Sunny"
+    return tavily.search(query=query)
+
+
+llm = ChatOpenAI()
+tools= [search]
+agent=create_agent(model=llm, tools=tools)
+
+def main():
+    result=agent.invoke({"messages":HumanMessage(content="What is weather in Tokyo") })
+    print(result)
+
+if __name__ == "__main__":
+    main()
+
+```
+
+
+## Tavily Implementation with Langchain
+
+Package: langchain-tavily
+
+```
+from dotenv import load_dotenv
+
+from langchain.agents import create_agent
+from langchain.tools import tool
+from langchain_core.messages import HumanMessage
+from langchain_openai import ChatOpenAI
+from langchain_tavily import TavilySearch
+
+load_dotenv()
+
+llm = ChatOpenAI(model="gpt-5")
+tools= [TavilySearch()]
+agent=create_agent(model=llm, tools=tools)
+
+def main():
+    result=agent.invoke({"messages":HumanMessage(content="Search for 3 job postings for an ai angineer in india") })
+    print(result)
+
+if __name__ == "__main__":
+    main()
+```
+
+
+#### Pydantic 
+- Structured Output
+
+
+
+
+
+
+
+
+
+
+
 
 
 
