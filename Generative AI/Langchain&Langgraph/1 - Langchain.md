@@ -100,7 +100,12 @@ LangChain is an open-source framework used to build and orchestrate LLM applicat
 
 
 
+## The Gist of AI Agents
 
+#### What are AI Agents?
+- An agent is software system that uses LLMs as reason engine to decide what actions to take and execute those actions
+
+-> React Agents
 
 
 
