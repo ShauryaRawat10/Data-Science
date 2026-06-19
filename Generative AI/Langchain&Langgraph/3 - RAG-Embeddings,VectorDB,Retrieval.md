@@ -25,11 +25,13 @@
 - Document loader is **abstraction** to help us load the data
 
 #### Langchain Text Splitters
-- Big document to chunks
+- Big document to chunks (semantically related)
 - Text Splitter helps us in splitting text to chunks
 - many methods and strategies
 
 -> RAG -> User Query + Context = Output
+
+![RAG Implemetation](https://github.com/ShauryaRawat10/Data-Science/blob/99c224311d5add9f41c0c9fdeadf55bbd0fa5962/Generative%20AI/Langchain%26Langgraph/storage/RAG.png)
 
 
 
