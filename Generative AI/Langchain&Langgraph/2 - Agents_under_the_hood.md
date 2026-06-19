@@ -170,7 +170,34 @@ uv run python 2_agent_loop_raw_function_calling.py
 uv run python 3_raw_react_prompt.py
 ```
 
+
 ## Prerequisites
 
 - **Ollama** running locally with the `qwen3:1.7b` model pulled (`ollama pull qwen3:1.7b`)
 - **LangSmith API key** in `.env` (optional, for tracing)
+
+
+
+
+***
+## Function calling
+- Also called **Tool calling**
+- Calling external function to generate well structured answer - JSON Obj output
+- Cabalility of certain LLM, not all LLM has it
+- Legacy ReAct prompt was not reliable, function calling is reliable, everything is done by vendor like Langchain
+- 2 main capability
+  - structured output
+  - connect to external function
+  - efficiency and token cost savings
+- Disadv
+  - Black boxes the ReAct prompt resoning and function calling and explanability
+
+
+
+
+
+
+
+
+
+
