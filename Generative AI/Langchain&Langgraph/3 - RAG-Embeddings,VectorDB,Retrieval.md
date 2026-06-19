@@ -34,6 +34,35 @@
 ![RAG Implemetation](https://github.com/ShauryaRawat10/Data-Science/blob/99c224311d5add9f41c0c9fdeadf55bbd0fa5962/Generative%20AI/Langchain%26Langgraph/storage/RAG.png)
 
 
+#### Boilerplate setup
+```
+1. Clone Repo:
+   -> git clone https://github.com/emarco177/langchain-course.git
+2. Change Directory
+   -> cd langchain-course
+3. Switch to correct branch and to initial commit in it
+   -> git checkout -b project/rag-gist 598dee435cb61dbb9c655644b0e05dd4cdaf833c
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
