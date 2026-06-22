@@ -44,6 +44,12 @@
    -> git checkout -b project/rag-gist 598dee435cb61dbb9c655644b0e05dd4cdaf833c
 ```
 
+Terminal setup
+```
+uv lock (creates new lock uv.lock file with all the dependencies that we need)
+uv sync (install all dependencies to .venv file by creating that .venv directory)
+
+```
 
 
 
