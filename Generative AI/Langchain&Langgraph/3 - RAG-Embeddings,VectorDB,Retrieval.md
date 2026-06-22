@@ -70,6 +70,8 @@ uv sync (install all dependencies to .venv file by creating that .venv directory
 ### Load -> Split -> Embed -> Store
 
 ```
+.env file
+
 OPENAI_API_KEY=sk-proj-4FC4Yx
 LANGSMITH_TRACING=true
 LANGSMITH_ENDPOINT=https://api.smith.langchain.com
@@ -80,6 +82,8 @@ PINECONE_API_KEY=pcsk_2ifB
 ```
 
 ```
+ingestion.py
+
 import os
 from dotenv import load_dotenv, find_dotenv
 from langchain_community.document_loaders import TextLoader 
@@ -111,7 +115,8 @@ if __name__ == '__main__':
     print("finish!!")
 ```
 
-
+-> Langchain Document Loaders: https://docs.langchain.com/oss/javascript/integrations/document_loaders
+-> Langchain document loader code: find in github langchain document loaders implementation (whatsapp, slack, twitter, youtube, etc)
 
 
 
