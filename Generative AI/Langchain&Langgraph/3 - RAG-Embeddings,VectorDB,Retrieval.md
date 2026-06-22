@@ -49,11 +49,67 @@ Terminal setup
 uv lock (creates new lock uv.lock file with all the dependencies that we need)
 uv sync (install all dependencies to .venv file by creating that .venv directory)
 
+
 ```
 
+#### Pinecone setup steps:
+- Create Index -> medium-blogs-embeddings-index
+- Config: text-embedding-3-small
+  - Vector Type: Dense
+  - Max Input: 8191 tokens
+  - Dimension: 1536
+  - Metric: cosine
+- Capacity mode: Serverless
+- Cloud provider: AWS
+- Region: us-east-1
+- create index
 
+***
+## Exercise 1
 
+### Load -> Split -> Embed -> Store
 
+```
+OPENAI_API_KEY=sk-proj-4FC4Yx
+LANGSMITH_TRACING=true
+LANGSMITH_ENDPOINT=https://api.smith.langchain.com
+LANGSMITH_API_KEY=lsv2_pt_0e14
+LANGSMITH_PROJECT="RAG Gist"
+INDEX_NAME=medium-blogs-embeddings-index
+PINECONE_API_KEY=pcsk_2ifB
+```
+
+```
+import os
+from dotenv import load_dotenv, find_dotenv
+from langchain_community.document_loaders import TextLoader 
+from langchain_community.document_loaders.base_o365 import CHUNK_SIZE
+from langchain_text_splitters import CharacterTextSplitter
+from langchain_openai import OpenAIEmbeddings
+from langchain_pinecone import PineconeVectorStore
+
+load_dotenv(find_dotenv())
+
+if __name__ == '__main__':
+    print("Ingesting...")
+
+    file_path = r"C:\Users\shaur\OneDrive\Desktop\langchain-course\mediumblog1.txt"
+    
+    loader = TextLoader(file_path, encoding='utf-8')
+    document = loader.load()
+
+    print("splitting...")
+    text_splitter = CharacterTextSplitter(chunk_size=1000, chunk_overlap=0)
+    texts = text_splitter.split_documents(document)
+    print(f"created {len(texts)} chunks")
+    
+    embeddings = OpenAIEmbeddings(openai_api_key=os.environ.get("OPENAI_API_KEY"))
+    
+    print("ingesting...")
+    PineconeVectorStore.from_documents(texts, embeddings, index_name=os.environ['INDEX_NAME'])
+
+    print("finish!!")
+```
 
 
 
