@@ -1,0 +1,6 @@
+I am sharing the dataset I created for Payments/cards variance analysis. Here is the detail about key attributes
+1. Curr_rsn_cd : C - Closed card, R- Replaced, E - Expiry Change, B - Brand Flip
+2. drc_code and de039_acq_resp_cd: Has 00 for approvals and 5,14,57, etc codes as decline reason codes
+3. de048se22sf05_cit_mit_indctr: Has CIT/MIT indicator. This tells if it is customer initiated transaction (tap on mall) or merchant initiated (applepay)
+4. de48_bank_merchant_advice_cd: Bank's merchant advice code, which tells bank what they should do for such type of transactions
+5. cof_indicator: If its card-on-file or non-card-on-file
