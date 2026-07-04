@@ -1,5 +1,5 @@
 # Introduction to Machine Learning
-
+***
 ### Definition:
 A computer program is said to learn from experience E with respect to some class of tasks T and performance measure P, if its performance at tasks in T, as measured by P, improves with experience E,
 
@@ -13,8 +13,6 @@ A computer program is said to learn from experience E with respect to some class
 - Potential applications: autonomous vehicles, satellite imaging, agriculture, industrial inspection, and medical imaging.
 
 **Key takeaway:** Better sensors → Better data → Better AI predictions.
-
----
 
 #### 2. Neuromorphic & Photonic Computing
 - Current AI hardware is limited by data movement and energy consumption.
