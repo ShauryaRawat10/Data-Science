@@ -4,6 +4,13 @@
 A computer program is said to learn from experience E with respect to some class of tasks T and performance measure P, if its performance at tasks in T, as measured by P, improves with experience E,
 
 ***
+
+- Note:
+GPU (Graphics Processing Unit) vs TPU (Tensor Processing Unit) vs LPU (Language Processing Unit)
+- GPU: For Model training, flexible development, and general-purpose parallel processing
+- TPU:  Large-scale AI model training and high-volume batch inference
+- LPU:  Real-time AI inference, specifically for Large Language Models (LLMs). It's sequential processing as compared to GPU 
+
 ### AI Research Computer Vision
 
 #### 1. Quantum Materials for Computer Vision
