@@ -105,5 +105,26 @@ Note:
 #### Legacy
 This work laid the foundation for modern Reinforcement Learning, self-play systems (AlphaGo/AlphaZero), heuristic search, and learning-based game AI.
 
+***
+### Supervised learning
+- learning a function (otherwise known as a model) from data to relate inputs to known outputs
+- Target function: 
+  - f  : X --> Y
+  - Hypothesis g::X→Y such that  g(x)=f(x).
+- 2 types
+  - Supervised:
+    - decision boundaries are a hyper-surface that partitions data space into multiple sets, each of these sets represent one of the classes
+    - May require Linear or complex decision boundaries to separate the class
+  - Regression: 
+
+
+
+
+
+
+
+
+
+
 
 
