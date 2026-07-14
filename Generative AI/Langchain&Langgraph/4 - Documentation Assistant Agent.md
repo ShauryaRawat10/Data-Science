@@ -19,3 +19,20 @@
 What is pipfile vs pipfile.lock
 - Pipfile is for humans. It defines your high-level project requirements and allows for flexibility (e.g., "I need LangChain, any version from version 0.1 onwards").
 - Pipfile.lock is for machines. It guarantees deterministic builds by locking down the exact version of every single package and sub-dependency, down to the specific digital fingerprint (hash).
+
+
+## Ingestion
+- **Tavily** responsible for crawling and scrapping of live doc
+- Langchain to chunk, embed and store data
+
+
+
+
+
+
+
+
+
+
+
+
