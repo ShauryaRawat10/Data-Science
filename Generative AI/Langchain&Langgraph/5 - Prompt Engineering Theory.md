@@ -81,7 +81,12 @@
 
 ![Context challenges](https://github.com/ShauryaRawat10/Data-Science/blob/a149623fb18005da12d44416aa350513fce6e5e6/Generative%20AI/Langchain%26Langgraph/storage/contextchanllenges.png)
 
+#### Context Engineering a System Prompt
+- Check github system prompts (system-prompts-and-models-of-ai-tools) for prompts from Cluely, Claude Code, Anthropic, etc
+- Empower rather than constraint
+- We should not make it deterministic, provide guidance (kind of greedy algo)
 
+![System-prompt-boundaries](https://github.com/ShauryaRawat10/Data-Science/blob/ba47ff0f110b4a21f3b9771c85da51317dde3480/Generative%20AI/Langchain%26Langgraph/storage/system_prompt_boundaries.jpg)
 
 
 
