@@ -59,6 +59,28 @@
 ![ReAct Prompting](https://github.com/ShauryaRawat10/Data-Science/blob/2b68813bf3b2d1a71b0e6fe1c1e161b28f661440/Generative%20AI/Langchain%26Langgraph/storage/ReAct_COT%2BAction.png)
 
 
+#### Prompt Engineering tips
+- Low hanging fruits tips to make prompts better
+- Write a good prompt
+  - **Context**: Contexual relevance for generating coherent and accurate responses. If not provided, LLM may generate its own which may not be relevant
+  - **Clear, non ambiguous task**
+  - **Iterations**
+    - Also can do testing and quality check of prompt
+
+#### Context Engineering
+- Has context window, the context can come from n number of sources (types of context)
+  - Instructions
+  - Knowledge
+  - Tools 
+- Number of context sources is increasing everyday
+- Every tool call has feedback from tool call, so the context window keeps on growing and start hallucination
+- **Context Poisoning** : One tool/llm call introduces hallucination that makes it to context in terms degarding assistant
+- **Context Confusion:** : Context which contradict and is irrelevant
+
+![Context engineering](https://github.com/ShauryaRawat10/Data-Science/blob/a149623fb18005da12d44416aa350513fce6e5e6/Generative%20AI/Langchain%26Langgraph/storage/contextengineering.png)
+
+![Context challenges](https://github.com/ShauryaRawat10/Data-Science/blob/a149623fb18005da12d44416aa350513fce6e5e6/Generative%20AI/Langchain%26Langgraph/storage/contextchanllenges.png)
+
 
 
 
