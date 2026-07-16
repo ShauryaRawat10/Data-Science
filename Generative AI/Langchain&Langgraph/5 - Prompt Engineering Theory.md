@@ -39,6 +39,31 @@
   - One Shot Prompting: **Model is given just 1 example of the result you want**
   - Few Shot Prompting: **Model is given a few examples of the result you want**
 
+#### Chain of Thought Prompting
+- LLM limitations:
+  - LLM can do Suummarization, Image generation, Code generation, Code optimization
+  - LLM can not do Multi-Step reasoning, and Common sense
+- COT Prompting aim to improve performance of LLM, and enables model to decompose multi-step problems into intermediate steps allowing model to solve complex reasoning problems
+- Types:
+  - Zero shots COT prompting
+    - Prefixing the answer block with **"Let's think step by step"** This prompts the LLM to complete the output in that format
+  - Few shots COT prompting
+    - provides examples of **<question, answer>** pairs where the answer is explained **"step by step"**
+   
+
+#### ReAct Prompting
+- Reasearch paper -> Synerziging reasoning and acting in language models
+- ReAct is a paradigm that integrates language models with reasoning and acting capabilities, allowing for dynamic reasining and interaction with extrenal env to perform complex tasks
+- ReAct -> COT + Action
+
+![ReAct Prompting](https://github.com/ShauryaRawat10/Data-Science/blob/2b68813bf3b2d1a71b0e6fe1c1e161b28f661440/Generative%20AI/Langchain%26Langgraph/storage/ReAct_COT%2BAction.png)
+
+
+
+
+
+
+
 
 
 
