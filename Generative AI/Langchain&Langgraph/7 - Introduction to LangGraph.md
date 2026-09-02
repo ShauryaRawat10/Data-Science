@@ -10,6 +10,7 @@
 
 ## Levels of Autonomy
 ![Levels of Autonomy](https://github.com/ShauryaRawat10/Data-Science/blob/adaf58eb23409b7d0d30cf2254dcd89e956be81d/Generative%20AI/Langchain%26Langgraph/storage/Levels-of-autonomy.png)
+- Langgraph is in step 5
 
 ## LangGraph Introduction
 ![Langraph-intro](https://github.com/ShauryaRawat10/Data-Science/blob/adaf58eb23409b7d0d30cf2254dcd89e956be81d/Generative%20AI/Langchain%26Langgraph/storage/Langgraph-Intro.png)
